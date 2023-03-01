@@ -410,7 +410,7 @@ body{
 	background-image: url("images/newsletter/s2022/s2022_August_18.png");
 	background-size: 100%;
 }
-#September122022{
+#Sep122022{
 	background-image: url("images/newsletter/f2022/f2022_September_12.png");
 	background-size: 100%;	
 }
@@ -419,6 +419,12 @@ body{
 	background-image: url("images/newsletter/f2022/f2022_October_3.png");
 	background-size: 100%;	
 }
+
+#Feb202023{
+	background-image: url("images/newsletter/s2023/s2023_feb20.png");
+	background-size: 100%;	
+}
+
 
 #placeholder{
 	background-image: url("images/newsletter/placeholder_newsletter.png");
