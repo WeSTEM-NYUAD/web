@@ -70,7 +70,7 @@ body {
 /*used for the team images*/
 .rounded-circle{
 	border:1px solid;
-	border-radius:70px;	
+	border: radius 100px;
 	width:100px;
 	height:150px;
 	margin: 10px;
@@ -425,6 +425,10 @@ body{
 	background-size: 100%;	
 }
 
+#Sep222023{
+	background-image: url("images/newsletter/f2023/f2023_september22.jpg");
+	background-size: 100%;
+}
 
 #placeholder{
 	background-image: url("images/newsletter/placeholder_newsletter.png");
