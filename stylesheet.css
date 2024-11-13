@@ -440,6 +440,26 @@ body{
 	background-size: 100%;
 }
 
+#Feb292024{
+	background-image: url("images/newsletter/s2024/s2024_februrary29.png");
+	background-size: 100%;
+}
+
+#Apr192024{
+	background-image: url("images/newsletter/s2024/s2024_april19.jpg");
+	background-size: 100%;
+}
+
+#Sep182024{
+	background-image: url("images/newsletter/f2024/f2024_september18.png");
+	background-size: 100%;
+}
+
+#Oct282024{
+	background-image: url("images/newsletter/f2024/f2024_october28.png");
+	background-size: 100%;
+}
+
 #placeholder{
 	background-image: url("images/newsletter/placeholder_newsletter.png");
 	background-size: 100%;
