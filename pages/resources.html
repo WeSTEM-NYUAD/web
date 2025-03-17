@@ -1,27 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V16J2HLBXC"></script>
-	<script>
-  		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-
-  		gtag('config', 'G-V16J2HLBXC');
-	</script>
-	
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V16J2HLBXC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V16J2HLBXC');
+    </script>
+    
     <title>Resources</title>
-    <!-- this is a template for SUBpages -->
-    <!-- dependencies: stylesheet in the main folder -->
-    <!-- instagram: https://www.instagram.com/westemnyuad/ -->
-    <!-- email: mailto:westem.team@nyu.edu-->
-    <!-- slack: https://docs.google.com/forms/d/e/1FAIpQLScE-LxnVmYpPy_MfN4Y2G0RHxUU6sdHsRg4ZKxxz2x53f3nyQ/viewform -->
-    <!-- pages: about(index.html) in main folder!!!, 
-        events (events.html) in the pages folder which should be the same folder as all the subpages, 
-        get involved (get_involved.html) in the pages folder which should be the same folder as all the subpages -->
-
-    <!-- bootstrap stuff, learn more about this here here:https://www.w3schools.com/bootstrap/-->
+    <!-- Bootstrap stuff -->
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
@@ -29,323 +19,231 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
 
-    <!-- the icon in the tab -->
+    <!-- Tab icon -->
     <link rel="icon" href="../images/logos/westem-logo-black.png">
 
-    <!-- linked needed from the social media icons -->
+    <!-- Social media icons -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-    <!-- used to import needed files to change the default font -->
+    <!-- Font -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,800' rel='stylesheet'>
 
-    <!-- link to our stylesheet -->
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
-
 </head>
 <body>
-    <!-- nav bar -->
-    <nav class='navbar sticky-top navbar-expand-lg navbar navbar-dark'> <!-- replace dark with light to get  -->
-
-        <a class='navbar-brand' href='#'>
-            <!-- adding weStem logo -->
-            <a class='navbar-brand' href='../index.html'><img src='../images/logos/westem-logo-white.png' class='img-responsive logo'>
-            </a>
+    <!-- Navigation Bar -->
+    <nav class='navbar sticky-top navbar-expand-lg navbar navbar-dark'>
+        <a class='navbar-brand' href='../index.html'>
+            <img src='../images/logos/westem-logo-white.png' class='img-responsive logo'>
         </a>
-
-        <!--dropdown button that appears for smaller screens such as phone -->
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
-        <span class='navbar-toggler-icon'></span>
+            <span class='navbar-toggler-icon'></span>
         </button>
-
-        <!-- nav bar contents aka links to other pages and social media icons -->
         <div class='collapse navbar-collapse' id='navbarNavDropdown'>
             <ul class='navbar-nav'>
-
-                <!-- #TODO activate the page that is current (make sure to change class='nav-link active' for respective pages e.g. the events.html should have the class of its page here activated-->
                 <li class='nav-item'>
-                    <!-- since this is templete for subpages we need to gou out of pages folder into main foler (hence the two dots, then go to index in the main folder) -->
                     <a class='nav-link' href='../index.html'>About</a>
                 </li>
-                <!-- <li class='nav-item'> -->
-                    <!-- the rest of the pages is in the same folder (ie pages) so we can just directly name the file name -->
-                    <!-- <a class='nav-link' href='events.html'>Events</a>
-                </li> -->
-
                 <li class='nav-item'>
                     <a class='nav-link' href='blog.html'>Blog</a>
                 </li>
-
                 <li class='nav-item'>
                     <a class='nav-link' href='newsletter.html'>Newsletter</a>
                 </li>
-                
                 <li class='nav-item'>
-					<a class='nav-link' href='hs_conference.html'>High School Conference</a>
-				</li>
-
+                    <a class='nav-link' href='hs_conference.html'>High School Conference</a>
+                </li>
                 <li class='nav-item active'>
                     <a class='nav-link' href='resources.html'>Resources</a>
                 </li>
-
                 <li class='nav-item'>
                     <a class='nav-link' href='get_involved.html'>Get involved</a>
                 </li>
-            </ul> 
-
-            <!-- the social media icons -->
+            </ul>
             <ul class='navbar-nav ml-auto'>
                 <a href='https://www.instagram.com/westemnyuad/' class='fa fa-instagram'></a>
                 <a href='mailto:westem.team@nyu.edu' class='fa fa-envelope'></a>
                 <a href='https://docs.google.com/forms/d/e/1FAIpQLScE-LxnVmYpPy_MfN4Y2G0RHxUU6sdHsRg4ZKxxz2x53f3nyQ/viewform' class='fa fa-slack'></a>
             </ul>
-            <!-- end of the social media icons -->
-
         </div>
     </nav>
-    <!-- end of navigation bar -->
-<!-- start of grid -->
-<div class="album py-5 bg-light">
+    <!-- End of Navigation Bar -->
 
-    <div class="container">
+    <!-- Start of Grid -->
+    <div class="album py-5 bg-light">
+        <div class="container">
 
-        <!-- Resources by Majors -->
-        <h1 class="heading">Resources by Majors</h1>
-        <hr>
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-lg-3 g-3">
-            <!-- element 1 -->
-            <a href="https://docs.google.com/document/d/1pB-bqxzozm7-URU0si8oo1ISWWYQ-eB17BInxkuqNYA/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Biology" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Biology</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Biology</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+            <!-- Resources by Majors -->
+            <h1 class="heading text-left">Resources by Majors</h1>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <!-- Biology -->
+                <a href="https://docs.google.com/document/d/1pB-bqxzozm7-URU0si8oo1ISWWYQ-eB17BInxkuqNYA/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Biology" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Biology</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Biology</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 2 -->
-            <a href="https://docs.google.com/document/d/1zdIoWt8ko5jNtbjs0qqGCSiTCgEUn--4NJzp7g_jOno/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Chemistry" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Chemistry</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Chemistry</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Chemistry -->
+                <a href="https://docs.google.com/document/d/1zdIoWt8ko5jNtbjs0qqGCSiTCgEUn--4NJzp7g_jOno/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Chemistry" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Chemistry</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Chemistry</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 3 -->
-            <a href="https://docs.google.com/document/d/1HZ2BuodsaocOo7GnqCs336eJ4ysvQjHt3y27PoGkxM0/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Compsci" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Computer Science</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Computer Science</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Computer Science -->
+                <a href="https://docs.google.com/document/d/1HZ2BuodsaocOo7GnqCs336eJ4ysvQjHt3y27PoGkxM0/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Compsci" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Computer Science</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Computer Science</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 4 -->
-            <a href="https://docs.google.com/document/d/15LRTX9jypqUSqa_80UKtk3o8GsqA7aRKA3EqlrjX2Nw/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Engineering" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Engineering</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Engineering</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Engineering -->
+                <a href="https://docs.google.com/document/d/15LRTX9jypqUSqa_80UKtk3o8GsqA7aRKA3EqlrjX2Nw/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Engineering" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Engineering</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Engineering</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 5 -->
-            <a href="https://docs.google.com/document/d/11OC4w8KryBPsmTGjckMBt3Viy3znKop2tq2N-CjJGz8/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Mathematics" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Mathematics</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Mathematics</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Mathematics -->
+                <a href="https://docs.google.com/document/d/11OC4w8KryBPsmTGjckMBt3Viy3znKop2tq2N-CjJGz8/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Mathematics" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Mathematics</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Mathematics</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 6 -->
-            <a href="https://docs.google.com/document/d/1YbYMNcLjSvPxMEI4INDTwPf8ivV2S2-VF5RPyQB0uLc/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Physics" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Physics</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Physics</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Physics -->
+                <a href="https://docs.google.com/document/d/1YbYMNcLjSvPxMEI4INDTwPf8ivV2S2-VF5RPyQB0uLc/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Physics" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Physics</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Physics</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- element 7 -->
-            <a href="https://docs.google.com/document/d/1yju6xW7FDfCH_zEB23-ab969oIRkobf7oAlUOj1E3TI/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Psychology" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Psychology</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Psychology</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+                <!-- Psychology -->
+                <a href="https://docs.google.com/document/d/1yju6xW7FDfCH_zEB23-ab969oIRkobf7oAlUOj1E3TI/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Psychology" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Psychology</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Psychology</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
 
-        </div>
-
-        <!-- Mathematics Replacement Test -->
-        <h1 class="heading">Mathematics Placement Test</h1>
-        <hr>
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-lg-3 g-3">
-            <!-- element 1 -->
-            <a href="https://janinecontreras.notion.site/Math-Placement-Test-2021-e98b2390cfb74837ae5b0e059d28e6b7" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Math" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Study Guide</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Study Guide</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+            <!-- Mathematics Placement Test -->
+            <h1 class="heading text-left mt-5">Mathematics Placement Test</h1>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <!-- Study Guide -->
+                <a href="https://janinecontreras.notion.site/Math-Placement-Test-2021-e98b2390cfb74837ae5b0e059d28e6b7" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Math" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Study Guide</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Study Guide</p>
                             </div>
                         </div>
                     </div>
-                </div>
-<!--             </a> -->
-
-            <!-- element 2 -->
-<!--             <a href="https://us3.campaign-archive.com/?u=88de091bebad14b6de073cc8f&id=02a09a3f03" target="_blank"> -->
-<!--                 <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="PastExams" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Past Exams</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Past Exams</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-<!--             </a> -->
-        </div>
-
-
-    </div>
-</div>
+                </a>
+            </div>
 
             <!-- Summer Research Opportunities -->
-    <div class="container text-center">
-        <h1 class="heading">Summer Research Opportunities</h1>
-        <hr>
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-lg-3 g-3">
-            <!-- element 1 -->
-            <a href="https://docs.google.com/document/d/1B13ogboUcpItKjA--4aEYhjEJKpWTHLv/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="Math" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Undergrad opportunities</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Undergrad opportunities</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+            <h1 class="heading text-left mt-5">Summer Research Opportunities</h1>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <!-- Undergrad Opportunities -->
+                <a href="https://docs.google.com/document/d/1B13ogboUcpItKjA--4aEYhjEJKpWTHLv/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="Math" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Undergrad Opportunities</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Undergrad Opportunities</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-    </div>
+                </a>
+            </div>
 
-    <!-- Grad School Programs -->
-    <div class="container text-center">
-        <h1 class="heading">Grad School Programs</h1>
-        <hr>
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-lg-3 g-3">
-            <!-- element 1 -->
-            <a href="https://docs.google.com/document/d/1B13ogboUcpItKjA--4aEYhjEJKpWTHLv/edit" target="_blank">
-                <div class="col box">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" id="GradSchool" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Grad School Opportunities</title></svg>
-
-                        <div class="card-body">
-                            <p class="card-text">Grad School Opportunities</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                </div>
+            <!-- Grad School Programs -->
+            <h1 class="heading text-left mt-5">Grad School Programs</h1>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <!-- Grad School Opportunities -->
+                <a href="https://docs.google.com/document/d/1B13ogboUcpItKjA--4aEYhjEJKpWTHLv/edit" target="_blank">
+                    <div class="col box">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" id="GradSchool" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Grad School Opportunities</title>
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-text">Grad School Opportunities</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
-    <!-- footer -->
+    <!-- End of Grid -->
+
+    <!-- Footer -->
     <!-- <div class='footer'>
         <a href='https://www.instagram.com/westemnyuad/' class='fa fa-instagram'></a>
         <a href='mailto:westem.team@nyu.edu' class='fa fa-envelope'></a>
-        <a href='https://docs.google.com/forms/d/e/1FAIpQLScE-LxnVmYpPy_MfN4Y2G0RHxUU6sdHsRg4ZKxxz2x53f3nyQ/viewform' class='fa fa-slack'></a> -->
-        <!-- <p class="footer-text">weSTEM 2021 | by Nouf Alabbasi, Yeonie Heo, and Ivana Drabova</p> -->
-    <!-- </div> -->
-    <!-- end of footer -->
-
+        <a href='https://docs.google.com/forms/d/e/1FAIpQLScE-LxnVmYpPy_MfN4Y2G0RHxUU6sdHsRg4ZKxxz2x53f3nyQ/viewform' class='fa fa-slack'></a>
+        <p class="footer-text">weSTEM 2021 | by Nouf Alabbasi, Yeonie Heo, and Ivana Drabova</p>
+    </div> -->
+    <!-- End of Footer -->
 </body>
 </html>
-
-
-
-
