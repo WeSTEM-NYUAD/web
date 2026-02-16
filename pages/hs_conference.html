@@ -28,9 +28,6 @@
 <!-- Custom Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../stylesheet.css">
 
-<!-- Bootstrap Carousel CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
 <!-- jQuery and Bootstrap JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -41,295 +38,605 @@
         box-sizing: border-box;
     }
 
-    h1 {
+    .conference-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .conference-section + .conference-section {
+        padding-top: 1.5rem;
+    }
+
+    .conference-section h1 {
         padding: 1%;
-        padding-top: 2%;
+        padding-top: 0;
         text-align: center;
         color: #333;
         font-family: 'Montserrat', sans-serif;
         font-size: 35px;
+        font-weight: 800;
     }
 
-    p {
-        padding-left: 15%;
-        padding-right: 4%;
-        /* padding-top: 1%; */
-        text-align: left; /* Adjusted alignment */
+    .conference-section h2 {
+        text-align: center;
+        color: #57068c;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .conference-section .section-subtitle {
+        text-align: center;
+        color: #57068c;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+    }
+
+    .conference-section p {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: left;
         font-size: 18px;
         line-height: 2;
         color: #333;
         font-family: 'Montserrat', sans-serif;
     }
 
-    /* Create a flex container for the main content */
     .main-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
-    /* Add horizontal line styles */
     .horizontal-line {
         width: 80%;
         border-top: 1px solid #333;
-        margin: 20px 0;
+        margin: 1rem auto;
     }
 
-    /* Create a flex container for the two sections (left and right) */
-    .flex-container {
+    /* Agenda table */
+    .agenda-table {
+        max-width: 700px;
+        margin: 0 auto 1rem;
+        border-collapse: collapse;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .agenda-table th {
+        background-color: #57068c;
+        color: white;
+        padding: 0.75rem 1rem;
+        text-align: left;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+
+    .agenda-table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+    }
+
+    .agenda-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .agenda-table tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    .agenda-table .time-col {
+        font-weight: 500;
+        color: #57068c;
+        white-space: nowrap;
+    }
+
+    /* Workshop cards */
+    .workshop-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        border-left: 4px solid #57068c;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .workshop-card h3 {
+        color: #57068c;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+
+    .workshop-card p {
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .workshop-note {
+        background: #f8f4fc;
+        border-radius: 8px;
+        padding: 0.75rem 1.25rem;
+        margin-top: 1rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .workshop-note a {
+        color: #57068c;
+        font-weight: 600;
+    }
+
+    /* Registration fees */
+    #section4 p {
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .fee-tier {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        margin: 0 auto 0.75rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        width: 100%;
+        max-width: 480px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+        border: 1px solid #e8e8e8;
+    }
+
+    .fee-tier .fee-period {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.4;
+    }
+
+    .fee-tier .fee-amount {
+        font-size: 22px;
+        font-weight: 800;
+        color: #57068c;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    .fee-tiers-wrapper {
         display: flex;
-        flex-direction: row; /* Adjusted for smaller screens */
-        align-items: center; /* Center align both sections */
-        width: 100%; /* Adjusted width for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
     }
 
-    /* Style the left section (40% width) */
-    .left-section {
-        padding-top: 2%;
-        width: 90%; /* Adjusted width for smaller screens */
+    .fee-exempt {
+        font-size: 15px;
+        color: #555;
+        margin-top: 1rem;
+        font-style: italic;
+        text-align: center;
     }
 
-    /* Style the right section (carousel) */
-    .right-section {
-        padding-top: 2%;
-        width: 90%; /* Adjusted width for smaller screens */
+    .btn-register {
+        background-color: #57068c;
+        color: white;
+        padding: 0.75rem 2.5rem;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        margin-top: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+        transition: background-color 0.2s;
     }
 
-    .carousel {
-        
-        padding-left: 0; /* Adjusted padding for smaller screens */
+    .btn-register:hover {
+        background-color: #45066d;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Attendance policies */
+    .policies-list {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .policies-list ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .policies-list li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.5rem;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .policies-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #57068c;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    /* Photo carousel */
+    .photo-carousel {
         position: relative;
         width: 100%;
-        height: 60vh;
+        height: 50vh;
+        min-height: 300px;
         overflow: hidden;
         background-color: #ffffff;
+        border-radius: 10px;
     }
 
-    .carousel-item .slide-image {
-
-        width: 100%;
-        height: 100%;
-        background-size: contain; /* Adjusted background size for better responsiveness */
-        background-repeat: no-repeat;
-    }
-
-    .carousel-item {
-        
+    .photo-carousel .slide-item {
         position: absolute;
         width: 100%;
         height: 100%;
-        border: none;
         top: 0;
         left: 100%;
+        transition: left 0.3s ease-out;
     }
 
-    .carousel-item.active {
+    .photo-carousel .slide-item.active {
         left: 0;
-        transition: all 0.3s ease-out;
     }
 
-    .carousel-item div {
+    .photo-carousel .slide-item div {
         height: 100%;
     }
 
-    .bottom-text {
-        padding: 4%;
+    .photo-carousel .slide-image {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
-    /* Media query for small screens (phones) */
+    /* Testimonials carousel - Bootstrap */
+    .testimonial-carousel .carousel-item {
+        padding: 1.5rem 3.5rem;
+        min-height: 200px;
+    }
+
+    .testimonial-carousel blockquote {
+        font-size: 18px;
+        font-style: italic;
+        color: #333;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .testimonial-carousel .carousel-control-prev,
+    .testimonial-carousel .carousel-control-next {
+        color: #57068c;
+        opacity: 0.8;
+    }
+
+    .testimonial-carousel .carousel-control-prev:hover,
+    .testimonial-carousel .carousel-control-next:hover {
+        color: #57068c;
+        opacity: 1;
+    }
+
+    /* Section 6 layout */
+    .gallery-testimonials-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery-col {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .testimonials-col {
+        flex: 1;
+        min-width: 0;
+    }
+
     @media (max-width: 768px) {
-        .flex-container {
-            flex-direction: column; /* Stack left and right sections vertically */
+        .gallery-testimonials-container {
+            flex-direction: column;
         }
-        .left-section,
-        .right-section {
-            width: 100%; /* Full width for both sections */
+
+        .conference-section p {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+        .agenda-table {
+            font-size: 14px;
+        }
+
+        .agenda-table th,
+        .agenda-table td {
+            padding: 0.5rem 0.75rem;
+        }
+
+        .testimonial-carousel .carousel-item {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
         }
     }
 </style>
-   
+
 </head>
 <body>
-    	<!-- nav bar -->
-	<nav class='navbar sticky-top navbar-expand-lg navbar navbar-dark'> <!-- replace dark with light to get  -->
-
+	<!-- nav bar -->
+	<nav class='navbar sticky-top navbar-expand-lg navbar navbar-dark'>
 		<a class='navbar-brand' href='#'>
-			<!-- adding weStem logo -->
-			<a class='navbar-brand' href='../index.html'><img src='../images/logos/westem-logo-white.png' class='img-responsive logo'>
-			</a>
+			<a class='navbar-brand' href='../index.html'><img src='../images/logos/westem-logo-white.png' class='img-responsive logo'></a>
 		</a>
-
-		<!--dropdown button that appears for smaller screens such as phone -->
 		<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
-		<span class='navbar-toggler-icon'></span>
+			<span class='navbar-toggler-icon'></span>
 		</button>
-
-		<!-- nav bar contents aka links to other pages and social media icons -->
 		<div class='collapse navbar-collapse' id='navbarNavDropdown'>
 			<ul class='navbar-nav'>
-
-				<!-- #TODO activate the page that is current (make sure to change class='nav-link active' for respective pages e.g. the events.html should have the class of its page here activated-->
 				<li class='nav-item'>
-					<!-- since this is templete for subpages we need to gou out of pages folder into main foler (hence the two dots, then go to index in the main folder) -->
 					<a class='nav-link' href='../index.html'>About</a>
 				</li>
-
-				<!-- <li class='nav-item'> -->
-					<!-- the rest of the pages is in the same folder (ie pages) so we can just directly name the file name -->
-					<!-- <a class='nav-link' href='events.html'>Events</a> -->
-				<!-- </li> -->
-
 				<li class='nav-item'>
-					<a class='nav-link' href='blog_waiting.html'>Blog</a>
+					<a class='nav-link' href='blog.html'>Blog</a>
 				</li>
-
 				<li class='nav-item'>
 					<a class='nav-link' href='newsletter.html'>Newsletter</a>
 				</li>
-
-                <li class='nav-item active'>
+				<li class='nav-item active'>
 					<a class='nav-link' href='hs_conference.html'>High School Conference</a>
 				</li>
-
 				<li class='nav-item'>
 					<a class='nav-link' href='resources.html'>Resources</a>
 				</li>
-
 				<li class='nav-item'>
 					<a class='nav-link' href='get_involved.html'>Get involved</a>
 				</li>
-
-
-			  </ul>
-
-			<!-- the social media icons -->
+			</ul>
 			<ul class='navbar-nav ml-auto'>
 				<a href='https://www.instagram.com/westemnyuad/' class='fa fa-instagram'></a>
 				<a href='mailto:westem.team@nyu.edu' class='fa fa-envelope'></a>
 				<a href='https://docs.google.com/forms/d/e/1FAIpQLScE-LxnVmYpPy_MfN4Y2G0RHxUU6sdHsRg4ZKxxz2x53f3nyQ/viewform' class='fa fa-slack'></a>
 			</ul>
-			<!-- end of the social media icons -->
-
 		</div>
 	</nav>
 	<!-- end of navigation bar -->
 
-    
-    <div class="main-container">
-    <h1>weSTEM's High School Conference</h1>
-    <!-- <hr> -->
-    <div class="horizontal-line"></div>
+	<!-- Section 1: Hero / Introduction -->
+	<section id="section1" class="conference-section">
+		<div class="main-container">
+			<h1>weSTEM High School Conference 2026</h1>
+			<p class="section-subtitle">April 4th, 2026 | Abu Dhabi, UAE</p>
+			<p class="section-subtitle">Campus Center C2 building - West Forum at NYU Abu Dhabi</p>
+			<div class="horizontal-line"></div>
+			<p class="text-left">The weSTEM High School Conference is a collaborative, interdisciplinary and locally engaged initiative, designed to promote diversity and female presence in the STEM fields (Science, Technology, Engineering and Mathematics) in and beyond the United Arab Emirates. One of our primary objectives is to stimulate interest and facilitate high school girl's preparation into successful STEM college studies and careers.</p>
+			<p class="text-left">The conference is focused on developing basic technical and interpersonal skill sets for girls who aspire to work in STEM and will consist of seminars focusing on careers and career development within the STEM field as well as workshops that teach various areas in STEM.</p>
+		</div>
+	</section>
 
-    <div class="flex-container">
-    <div class="left-section">
-    <p>The weSTEM High School Conference is a collaborative, interdisciplinary and locally engaged initiative, designed to promote diversity and female presence in the STEM fields (Science, Technology, Engineering and Mathematics) in and beyond the United Arab Emirates. One of our primary objectives is to stimulate interest and 
-        facilitate high school girl's preparation into successful STEM college studies and careers.</p><br>
-        <p>The conference is focused on developing basic technical and interpersonal skill sets for girls who aspire to work in STEM and will consist of seminars focusing on careers and career development within the STEM field as well as workshops that teach various areas in STEM.</p>
-    </div>
+	<!-- Section 2: Conference Agenda -->
+	<section id="section2" class="conference-section">
+		<div class="container">
+			<h2>Conference Agenda</h2>
+			<table class="agenda-table">
+				<thead>
+					<tr>
+						<th>Time</th>
+						<th>Activity</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="time-col">8:00–9:00</td>
+						<td>Registration and Welcome Session</td>
+					</tr>
+					<tr>
+						<td class="time-col">9:00–10:00</td>
+						<td>Breakfast and Ice-Breaker Activities</td>
+					</tr>
+					<tr>
+						<td class="time-col">10:00–11:45</td>
+						<td>A Hands-on STEM Workshop Session</td>
+					</tr>
+					<tr>
+						<td class="time-col">12:00–13:00</td>
+						<td>Lunch and Informal Networking</td>
+					</tr>
+					<tr>
+						<td class="time-col">13:00–13:30</td>
+						<td>Post-Lunch Energizing Activity</td>
+					</tr>
+					<tr>
+						<td class="time-col">13:45–14:45</td>
+						<td>Panel Discussion with Researchers and NYUAD Faculty</td>
+					</tr>
+					<tr>
+						<td class="time-col">14:45–15:00</td>
+						<td>Closing Remarks and Reflections</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
 
-    <div class="right-section">
-        <div class="carousel"> 
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/1.png');"> 
-                </div> 
-            </div> 
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/2.png');"> 
-                </div> 
-            </div> 
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/3.png');"> 
-                </div> 
-            </div> 
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/4.png');"> 
-                </div> 
-            </div> 
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/5.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/6.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/7.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/9.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/10.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/11.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/12.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/13.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/17.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/15.png');"> 
-                </div> 
-            </div>
-            <div class="carousel-item"> 
-                <div class="slide-image"
-                    style="background-image:  
-    url('../images/westem_hsc/16.png');"> 
-                </div> 
-            </div>
-        </div> 
-    </div>
-   
-       </div>
-    </div>
-    
+	<!-- Section 3: Workshops Details -->
+	<section id="section3" class="conference-section">
+		<div class="container">
+			<h2>Workshops</h2>
+			<p>The conference program brings together interactive, hands-on workshops across various STEM fields alongside opportunities for discussion, collaboration, and engagement with university students and researchers. Each workshop is designed to introduce students to real scientific and engineering thinking through short guided introductions followed by practical activities.</p>
 
-    <div class="bottom-text">
-    <p></p>
-       </div>
-    </div>
-        <script src="../script.js"></script>
-        </body>
+			<div class="workshop-card">
+				<h3>Engineering Workshop: DIY Mini Piano</h3>
+				<p>Students will design and test a simple electronic system that produces sound using an ESP32 microcontroller, buttons, and basic circuit components. The workshop emphasizes engineering trade-offs, system optimization, and iterative problem-solving under constraints.</p>
+			</div>
+			<div class="workshop-card">
+				<h3>Physics Workshop: Holographic Rainbow Chocolate</h3>
+				<p>Students will explore diffraction and interference by creating and analyzing rainbow patterns on chocolate surfaces. Through measurements and data analysis, participants connect observations to physical models while discussing uncertainty and experimental error.</p>
+			</div>
+			<div class="workshop-card">
+				<h3>Chemistry Workshop: Chemical Mystery Investigation</h3>
+				<p>Students are given several unknown aqueous solutions and a limited set of chemical tests (pH indicators, conductivity, and selected reactions) and must determine each solution's identity. The workshop focuses on experimental design, chemical reasoning, and evidence-based conclusions.</p>
+			</div>
+
+			<div class="workshop-note text-center">
+				<strong>Important Note for Schools:</strong> Students will participate in one hands-on workshop during the conference. Please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSch3hxsM97VkoPdyiqnG7-A7znynD3g1t8R-oHLPd0PCETBSQ/viewform?usp=publish-editor" id="workshop-form-link">this form</a> to indicate your workshop preferences.
+			</div>
+		</div>
+	</section>
+
+	<!-- Section 4: Registration Fees -->
+	<section id="section4" class="conference-section">
+		<div class="container text-center">
+			<h2>Registration Fees (Including VAT)</h2>
+			<p>Please find the confirmed registration fees per student below:</p>
+			<div class="fee-tiers-wrapper">
+				<div class="fee-tier">
+					<div class="fee-period">Early Bird: Feb 1 – Feb 23, 2026</div>
+					<div class="fee-amount">AED 84</div>
+				</div>
+				<div class="fee-tier">
+					<div class="fee-period">Regular: Feb 24 – Mar 10, 2026</div>
+					<div class="fee-amount">AED 105</div>
+				</div>
+			</div>
+			<p class="fee-exempt">School counselors and representatives are exempt from the registration fee.</p>
+			<a href="https://epay.nyu.edu/ad/westem2026/" class="btn btn-register" id="register-btn">Register Here</a>
+		</div>
+	</section>
+
+	<!-- Section 5: Attendance Policies -->
+	<section id="section5" class="conference-section">
+		<div class="container">
+			<h2>Important Attendance Policies</h2>
+			<div class="policies-list">
+				<ul>
+					<li>Please note that participation in selected workshops requires the completion and submission of the following forms: <a href="https://docs.google.com/forms/d/e/1FAIpQLScsD0FvBPlEVp57GUeMq22kDoclRK9WUOl1MoBKwvnCaY2fHg/viewform?usp=header">Media Release Form</a> and Liability & <a href="https://docs.google.com/forms/d/e/1FAIpQLScpTrQ3ME8Jjvyn5Ou5GVtolKj3ry3ALADMp4yC7bdE6TWBdQ/viewform?usp=header">Safety Waiver</a>.</li>
+					<li>All students and counselors/designated school representatives must be registered in advance in order to attend.</li>
+					<li>We will not accept any applicants after March 10, 2026.</li>
+					<li>For the student to receive a certificate of attendance, they must be engaged at the conference for the full day.</li>
+					<li>A school counselor or a designated school representative must attend the conference with students.</li>
+					<li>Only registered students will be permitted to attend the conference.</li>
+					<li>Light breakfast and lunch will be provided for registered attendees only.</li>
+					<li>Students may visit the campus coffee shop only during designated breaks and must be accompanied by a school counselor or designated school representative.</li>
+					<li>No transportation will be provided; transportation arrangements are the responsibility of the school.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section 6: Gallery and Testimonials -->
+	<section id="section6" class="conference-section">
+		<div class="container">
+			<div class="gallery-testimonials-container">
+				<div class="gallery-col">
+					<h2>Gallery</h2>
+					<div id="photo-carousel" class="photo-carousel">
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/1.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/2.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/3.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/4.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/5.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/6.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/7.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/9.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/10.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/11.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/12.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/13.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/17.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/15.png');"></div></div>
+						<div class="slide-item"><div class="slide-image" style="background-image: url('../images/westem_hsc/16.png');"></div></div>
+					</div>
+				</div>
+				<div class="testimonials-col">
+					<h2>Testimonials</h2>
+					<div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<blockquote>"My favorite part was the biology workshop and the panelist discussion. The biology workshop was very fun and engaging as it was catered to my interests. The panelist discussion also helped empower me and it answered a lot of questions and confusion that I had about wanting to pursue a STEM field."</blockquote>
+							</div>
+							<div class="carousel-item">
+								<blockquote>"I enjoyed the trivia quiz and also meeting like minded people who I could talk to about my goals."</blockquote>
+							</div>
+							<div class="carousel-item">
+								<blockquote>"My mentors and the community and the overall motivation generated by this event is phenomenal."</blockquote>
+							</div>
+							<div class="carousel-item">
+								<blockquote>"My favorite part was, that it was all hands on and doing it myself, made it more fun."</blockquote>
+							</div>
+							<div class="carousel-item">
+								<blockquote>"Being on campus and exploring different aspects of endeavours the panelists went through to get to where they are now."</blockquote>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		// Photo carousel - scoped to #photo-carousel only
+		window.onload = function () {
+			var photoCarousel = document.getElementById('photo-carousel');
+			if (photoCarousel) {
+				var slides = photoCarousel.getElementsByClassName('slide-item');
+				if (slides.length > 0) {
+					slides[0].classList.add('active');
+					setInterval(function () {
+						for (var i = 0; i < slides.length; i++) {
+							if (i + 1 == slides.length) {
+								slides[0].classList.add('active');
+								setTimeout(function(idx) { slides[idx].classList.remove('active'); }, 350, i);
+								break;
+							}
+							if (slides[i].classList.contains('active')) {
+								setTimeout(function(idx) { slides[idx].classList.remove('active'); }, 350, i);
+								slides[i + 1].classList.add('active');
+								break;
+							}
+						}
+					}, 3000);
+				}
+			}
+		};
+	</script>
+</body>
 </html>
